@@ -1,6 +1,30 @@
+<script setup>
+  function mostrarMenu(){
+    
+    const navbar = document.getElementsByClassName("navbar")[0];
+    const menu = navbar.getElementsByClassName("menu")[0];
+
+    if (navbar.classList.contains('mostrar')){
+      navbar.classList.remove('mostrar');
+      menu.style.display = '';
+      return;
+    }
+
+    console.log("entro a version movil")
+    menu.style.display = 'block';
+    navbar.classList.add('mostrar');
+
+  }
+</script>
+
 <template>
   <div class="navbar">
-    <img id="logo" src="/src/images/deux-logo.png"/>
+    <div class="marca">
+      <button id="btn-menu" @click="mostrarMenu">
+        <i class="bi bi-list"></i>
+      </button>
+      <img id="logo" src="/src/images/deux-logo.png"/>
+    </div>
     <ul class="menu">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
@@ -11,6 +35,59 @@
 </template>
 
 <style scoped>
+
+  @media only screen and (min-width: 600px){
+    #btn-menu{
+      display: none;
+    }
+
+    .navbar .menu{
+      display: flex !important;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #btn-menu{
+      display: block;
+      height: 50px;
+      width: 50px;
+      background: none;
+      border: none;
+    }
+
+    #btn-menu i{
+      color: #000000;
+      font-size: 2.5rem;
+    }
+
+    .navbar{
+      height: auto;
+      align-items: center;
+      flex-direction: row;
+      justify-content: normal !important;
+      gap: 50px;
+    }
+
+    .navbar .menu{
+      display: none;
+      width: 100%;
+    }
+
+    .mostrar{
+      flex-direction: column;
+      gap: 10px;
+    }
+
+  }
+
+  .marca{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
   .navbar {
     background: #FFFFFF;
     position: relative;
@@ -21,7 +98,6 @@
 
   .navbar .menu{
     color: black;
-    display: inline-flex;
     list-style: none;
     align-items: center;
     font-family: 'Roboto Condensed';

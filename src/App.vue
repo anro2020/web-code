@@ -144,6 +144,61 @@ import NavBar from './components/NavBar.vue'
 
 <style scoped>
 
+ @media only screen and (max-width: 600px) {
+
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+    #presentacion{
+      flex-direction: column;
+      height: auto !important;
+    }
+
+    #presentacion #descripcion{
+      width: 100% !important;
+      padding: 10px !important;
+    }
+
+    #presentacion #descripcion p:nth-of-type(1){
+      font-size: 1.5rem !important;
+      line-height: 2.3rem !important;
+    }
+
+    #presentacion #descripcion p:nth-of-type(2){
+      font-size: 1rem !important;
+      line-height: 2rem !important;
+    }
+
+    #presentacion #imagen {
+      width: 100% !important;
+    }
+
+    #servicios .elementos{
+      flex-direction: column;
+      height: auto !important;
+    }
+
+    #servicios .elementos .descripcion{
+      font-size: 1rem !important;
+    }
+
+    #servicios .elementos .titulo{
+      font-size: 1.2rem !important;
+    }
+
+    #contacto #informacion-contacto .elementos{
+      font-size: 1.4rem !important;
+      width: 100%;
+    }
+
+    #contacto #informacion-contacto .elementos:nth-child(3):before,
+    #contacto #informacion-contacto .elementos:nth-child(4):before{
+      display: none;
+    }
+  }
+
 body{
   background-color: #FDFDF5;
 }
@@ -370,26 +425,24 @@ footer{
 }
 
 #contacto #informacion-contacto .elementos{
+  font-size: 1.7rem;
   color: #747474;
   display: flex;
 }
 
 #contacto #informacion-contacto .elementos > #telefono{
-  font-size: 1.7rem;
   gap: 15px;
   display: flex;
   align-items: center;
 }
 
 #contacto #informacion-contacto .elementos > #correo{
-  font-size: 1.7rem;
   gap: 15px;
   display: flex;
   align-items: center;
 }
 
 #contacto #informacion-contacto .elementos > #social{
-  font-size: 1.7rem;
   gap: 15px;
   display: flex;
   align-items: center;
