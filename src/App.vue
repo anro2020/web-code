@@ -117,19 +117,19 @@ import NavBar from './components/NavBar.vue'
           <div class="elementos">
            <div id="telefono">
              <i class="bi bi-telephone"></i>
-            <span>87-00-00-00-00</span>
+            <span>83-33-19-71-05</span>
            </div>
           </div>
           <div class="elementos">
             <div id="correo">
               <i class="bi bi-envelope"></i>
-              <span>deuxsoftware@gmail.com</span>
+              <span>deuxsoftware.contacto@gmail.com</span>
             </div>
           </div>
           <div class="elementos">
             <div id="social">
               <i class="bi bi-facebook"></i>
-              <span>@DeuxSoftware</span>
+              <span>Deux Software</span>
            </div>
           </div>
         </div>
